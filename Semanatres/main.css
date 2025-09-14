@@ -10,6 +10,12 @@ body {
   height: auto;
   border-radius: 50%;
 }
+/*copetin*/
+.copetin {
+    width: 80%;
+  height: auto;
+  border-radius: 100%;
+}
 
 /* Hero */
 .hero {
