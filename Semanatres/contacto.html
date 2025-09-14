@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Paucakes Pastelería — Contacto</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="maincontacto.css">
+</head>
+<body class="bg-gray-50 text-gray-800 leading-relaxed">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-pink-600 via-pink-500 to-fuchsia-600">
+    <div class="max-w-6xl mx-auto px-4 py-6 relative">
+      <!-- Nav -->
+      <nav class="flex items-center justify-between" aria-label="Navegación principal">
+        <!-- Left -->
+        <div class="hidden md:flex space-x-6 items-center">
+          <a class="text-white hover:text-pink-100 font-semibold" href="PAGINA PRINCIPAL.html">Inicio</a>
+          <a class="text-white hover:text-pink-100 font-semibold" href="produtcos.html">Productos</a>
+        </div>
+
+        <!-- Logo -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-2">
+          <a href="index.html" class="flex flex-col items-center" aria-label="Paucakes Pastelería">
+            <img src="../semanados/img/Adobe Express - file.jpg" alt="Logo Paucakes" class="w-28 h-28 rounded-full object-cover shadow-2xl border-4 border-white">
+          </a>
+        </div>
+
+        <!-- Right -->
+        <div class="hidden md:flex space-x-6 items-center">
+          <a class="text-white hover:text-pink-100 font-semibold" href="#contacto">Contacto</a>
+          <a class="bg-white/20 hover:bg-white/30 text-white py-2 px-4 rounded-md transition" href="#ubicacion">Ubicación</a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button id="btn-mobile" aria-expanded="false" aria-controls="mobile-menu" class="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-white/60">
+            <svg class="w-7 h-7 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Hero texto -->
+      <div class="mt-20 text-center">
+        <h1 class="text-white text-3xl md:text-4xl font-extrabold drop-shadow-lg">Paucakes Pastelería</h1>
+        <p class="text-white/90 mt-2">Dulces, tortas y felicidad artesanal</p>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden bg-pink-600/95 hidden">
+      <div class="px-4 py-4 flex flex-col gap-2 items-center">
+        <a href="index.html" class="text-white font-semibold">Inicio</a>
+        <a href="productos.html" class="text-white font-semibold">Productos</a>
+        <a href="#contacto" class="text-white font-semibold">Contacto</a>
+        <a href="#ubicacion" class="text-white font-semibold">Ubicación</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="max-w-6xl mx-auto px-4 py-12">
+    <section id="contacto" class="mb-12 grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+      <!-- Info + Formulario -->
+      <div class="md:col-span-2 bg-white p-6 rounded-2xl shadow-lg">
+        <h2 class="text-2xl font-bold text-pink-600">Contacto</h2>
+        <p class="mt-3 text-gray-600">¿Tenés una consulta o querés hacer un pedido? ¡Escribinos!</p>
+
+        <div class="mt-6 space-y-3">
+          <p class="flex items-center gap-3"><span class="text-xl">📱</span> <strong>Celular:</strong> <span class="text-gray-700">261 645 9340</span></p>
+          <p class="flex items-center gap-3">
+            <span class="text-xl">📷</span>
+            <strong>Instagram:</strong>
+            <a class="text-pink-600 font-semibold underline" href="https://www.instagram.com/paucakespasteleria" target="_blank" rel="noopener noreferrer">@paucakespasteleria</a>
+          </p>
+        </div>
+
+        <!-- Formulario -->
+        <form class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4" aria-label="Formulario de contacto">
+          <input class="p-3 border rounded-lg focus:ring-2 focus:ring-pink-300" type="text" placeholder="Tu nombre" required>
+          <input class="p-3 border rounded-lg focus:ring-2 focus:ring-pink-300" type="email" placeholder="Tu correo" required>
+          <textarea class="md:col-span-2 p-3 border rounded-lg focus:ring-2 focus:ring-pink-300" rows="4" placeholder="Escribí tu mensaje"></textarea>
+          <button type="submit" class="md:col-span-2 inline-block py-3 px-6 bg-pink-600 text-white rounded-lg font-semibold hover:scale-105 transform transition">Enviar mensaje</button>
+        </form>
+      </div>
+
+      <!-- Ubicación -->
+      <aside id="ubicacion" class="bg-white p-6 rounded-2xl shadow-lg">
+        <h3 class="text-lg font-bold text-pink-600">Ubicación</h3>
+        <p class="mt-3 text-gray-600">Calle Bombal 455, Guaymallén, Mendoza</p>
+        <img src="img/ubicacion.jpg" alt="Mapa Paucakes" class="mt-4 w-full rounded-lg shadow-sm object-cover">
+        <div class="mt-4">
+          <h4 class="font-semibold">Horario</h4>
+          <p class="text-gray-700">Mar - Dom: 09:00 - 20:00</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center py-4">
+    <p class="m-0"> Todos los derechos reservados</p>
+  </footer>
+
+  <!-- Script menú móvil -->
+  <script>
+    const btn = document.getElementById('btn-mobile');
+    const mobile = document.getElementById('mobile-menu');
+    btn?.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      mobile.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
