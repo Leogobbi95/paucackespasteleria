@@ -1,67 +1,21 @@
-/* Archivo: css/mainindex.css
-   Complemento visual a Tailwind: pseudoelementos, animaciones y pequeños ajustes.
-*/
-
-/* Variables de colores (para posibles overrides) */
-:root{
-  --pink: #ae1f62;
-  --pink-strong: #e5108c;
-}
-
-/* Ajustes globales */
+/* Ajustes generales */
 body {
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Botón con pseudoelemento "shine" */
-button.inline-flex::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  pointer-events: none;
-  background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.12), rgba(255,255,255,0.06));
-  opacity: 0;
-  transform: translateX(-20%);
-  transition: opacity .35s ease, transform .5s ease;
-}
-button.inline-flex:hover::after {
-  opacity: 1;
-  transform: translateX(20%);
+/* Hover en inputs */
+input:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(214, 51, 108, 0.4);
+  border-color: #d6336c;
 }
 
-/* Sombra sutil alrededor del logo para destacar */
-header .rounded-full {
-  box-shadow: 0 10px 30px rgba(174,31,98,0.18), 0 2px 8px rgba(0,0,0,0.06);
+/* Animación en botones */
+button {
+  transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
-/* Pequeña animación para la tarjeta al entrar en viewport (se puede mejorar con IntersectionObserver) */
-@keyframes floatUp {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-article, aside {
-  animation: floatUp .6s ease both;
-}
-
-/* Focus visible accesible */
-a:focus, button:focus, input:focus, textarea:focus {
-  outline: 3px solid rgba(174,31,98,0.18);
-  outline-offset: 3px;
-}
-
-/* Media queries extras (Tailwind ya cubre lo básico) */
-@media (max-width: 640px) {
-  header .absolute {
-    position: static;
-    transform: none;
-    margin-top: -48px;
-  }
-  header .mt-20 { margin-top: 2rem; }
-}
-
-/* Ajustes para impresión rápida (si imprimen la página) */
-@media print {
-  header, footer, .menu { display: none; }
-  main { width: 100%; }
+button:hover {
+  background-color: #b91c1c; /* tono más fuerte */
+  transform: scale(1.05);
 }
